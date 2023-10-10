@@ -4,8 +4,18 @@ const CreatePostForm = ({}) => {
     const [user, setUser] = useState('');
     const [text, setText] = useState('');
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const postData = {
+            user,
+            text,
+        }
+
+        console.log(postData);
+    }
+
     return (
-        <form action="flex-item">
+        <form onSubmit={handleSubmit} action="flex-item">
             <div>
                 <label>Name</label>
                 <input value={user} onChange={(e) => setUser(e.target.value)} />
