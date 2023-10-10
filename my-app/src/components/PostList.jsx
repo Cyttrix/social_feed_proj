@@ -1,5 +1,5 @@
-const MovieList = ({}) => {
-    const posts = [{user: "Jack Torrance", text: "HERES JOHNNY"}, {user: "Freddy Kruger", text: "Sweet Dreams Nancy"}];
+const MovieList = ({ posts = [] }) => {
+    
     const postItems = posts.map((post) => <div>{post.user} {post.text}</div>);
     return ( 
     <div>
