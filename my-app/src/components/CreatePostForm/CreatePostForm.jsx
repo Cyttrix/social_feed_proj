@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
+import './CreatePostForm.css';
 
-const CreatePostForm = ({}) => {
+const CreatePostForm = ({onNewPost}) => {
     const [user, setUser] = useState('');
     const [text, setText] = useState('');
 
@@ -11,21 +12,23 @@ const CreatePostForm = ({}) => {
             text,
         }
 
-        console.log(postData);
+       onNewPost(postData);
     }
 
     return (
-        <form onSubmit={handleSubmit} action="flex-item">
+    
+        <form onSubmit={handleSubmit}>
             <div>
                 <label>Name</label>
-                <input value={user} onChange={(e) => setUser(e.target.value)} />
+                <textarea value={user} onChange={(e) => setUser(e.target.value)} />
             </div>
             <div>
                 <label>Post</label>
-                <input value={text} onChange={(e) => setText(e.target.value)} />
+                <textarea value={text} onChange={(e) => setText(e.target.value)}/>
             </div>
             <button type="submit">Post</button>
         </form>
+    
     )
 }
 

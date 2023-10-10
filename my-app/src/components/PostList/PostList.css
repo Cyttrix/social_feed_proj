@@ -1,0 +1,10 @@
+.outline {
+    overflow-wrap: break-word;
+    border: 3px double;
+    padding: 10px;
+    margin-left: 400px;
+    margin-right: 400px;
+    height: auto;
+    width: auto;
+    background-color: lightgoldenrodyellow;
+}
